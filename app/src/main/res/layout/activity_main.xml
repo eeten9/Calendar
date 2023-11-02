@@ -144,6 +144,7 @@
         android:contentDescription="addReminder"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
+        android:onClick="openNewActivity"
         app:backgroundTint="@color/desatumber"
         app:fabSize="normal"
         app:maxImageSize="40dp"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -90,6 +91,11 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
         setMonthView();
     }
 
+    public void openNewActivity(){
+        Intent intent = new Intent(this, ReminderActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onItemClick(int position, String dayText)
     {
@@ -99,4 +105,6 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
             Toast.makeText(this, message, Toast.LENGTH_LONG).show();
         }
     }
+
+
 }
